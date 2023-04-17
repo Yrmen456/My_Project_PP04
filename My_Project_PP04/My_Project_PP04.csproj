@@ -66,6 +66,12 @@
     <Compile Include="Control\PanelTopBtn.Designer.cs">
       <DependentUpon>PanelTopBtn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Control\UserProductList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\UserProductList.Designer.cs">
+      <DependentUpon>UserProductList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Control\ProductList.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -77,6 +83,12 @@
     </Compile>
     <Compile Include="Control\CategoriesListItems.Designer.cs">
       <DependentUpon>CategoriesListItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\UserProductListItems.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\UserProductListItems.Designer.cs">
+      <DependentUpon>UserProductListItems.cs</DependentUpon>
     </Compile>
     <Compile Include="Control\ProductListItems.cs">
       <SubType>UserControl</SubType>
@@ -114,35 +126,41 @@
     <Compile Include="Control\Registration\Registration3ThirdControl.Designer.cs">
       <DependentUpon>Registration3ThirdControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Control\UserControl1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Control\UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Data\BtnPassword.cs.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Data\Data.cs" />
     <Compile Include="Data\Enum.cs" />
     <Compile Include="Data\ValidateData.cs" />
+    <Compile Include="Forms\Basket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Basket.Designer.cs">
+      <DependentUpon>Basket.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\EntryForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\EntryForm.Designer.cs">
       <DependentUpon>EntryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Mian.cs">
+    <Compile Include="Forms\Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Mian.Designer.cs">
-      <DependentUpon>Mian.cs</DependentUpon>
+    <Compile Include="Forms\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\PatternForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\PatternForm.Designer.cs">
       <DependentUpon>PatternForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserDate.Designer.cs">
+      <DependentUpon>UserDate.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -155,11 +173,17 @@
     <EmbeddedResource Include="Control\PanelTopBtn.resx">
       <DependentUpon>PanelTopBtn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Control\UserProductList.resx">
+      <DependentUpon>UserProductList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Control\ProductList.resx">
       <DependentUpon>ProductList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Control\CategoriesListItems.resx">
       <DependentUpon>CategoriesListItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\UserProductListItems.resx">
+      <DependentUpon>UserProductListItems.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Control\ProductListItems.resx">
       <DependentUpon>ProductListItems.cs</DependentUpon>
@@ -179,17 +203,20 @@
     <EmbeddedResource Include="Control\Registration\RegistrationInfoAdress.resx">
       <DependentUpon>RegistrationInfoAdress.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Control\UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Basket.resx">
+      <DependentUpon>Basket.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EntryForm.resx">
       <DependentUpon>EntryForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Mian.resx">
-      <DependentUpon>Mian.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PatternForm.resx">
       <DependentUpon>PatternForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserDate.resx">
+      <DependentUpon>UserDate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -253,6 +280,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\BackgroundRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Новый проект %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

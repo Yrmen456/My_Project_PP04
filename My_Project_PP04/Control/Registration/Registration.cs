@@ -93,7 +93,18 @@ namespace My_Project_PP04.Control.Registration
             dt.Columns.Add("Room");
             dt.Columns.Add("Porth");
             dt.Columns.Add("Floor");
-            dt.Rows.Add(1,registrationInfoAdress.validateTexBox1.Text, registrationInfoAdress.validateTexBox2.Text, registrationInfoAdress.validateTexBox3.Text, registrationInfoAdress.validateTexBox4.Text, registrationInfoAdress.validateTexBox5.Text);;
+            string IDUser = "";
+            string Street = registrationInfoAdress.validateTexBox1.Text;
+            string House = registrationInfoAdress.validateTexBox2.Text;
+            string Room = registrationInfoAdress.validateTexBox3.Text;
+            string Porth = registrationInfoAdress.validateTexBox4.Text;
+            string Floor = registrationInfoAdress.validateTexBox5.Text;
+            if (Street != ""|| House != ""||Room != ""||Porth != ""||Floor != "")
+            {
+                MessageBox.Show("ne null");
+                dt.Rows.Add(IDUser, Street, House, Room, Porth, Floor);
+            }
+           
             List<SqlParameter> ListSqlParamete = new List<SqlParameter>()
             {
                 new SqlParameter{ParameterName = "@Login", SqlDbType = SqlDbType.NVarChar, Value= registration1FirstControl.validateTexBoxLogin.Text },

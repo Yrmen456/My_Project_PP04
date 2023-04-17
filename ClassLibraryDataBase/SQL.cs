@@ -73,27 +73,27 @@ namespace LibraryDataBase
         {
             DataSet Table = new DataSet();
             SqlConnection con = new SqlConnection(SQL.Conect);
-            //try
-            //{
+            try
+            {
                 con.Open();
-            //}
-            //catch (Exception)
-            //{
-            //
-            //    return Table;
-            //}
-            //try
-            //{
+            }
+            catch (Exception)
+            {
+
+                return Table;
+            }
+            try
+            {
                 SqlDataAdapter a = new SqlDataAdapter(query, SQL.Conect);
                 a.SelectCommand.Parameters.AddRange(ListSqlParamete.ToArray());
                 a.Fill(Table);
                 return Table;
-            //}
-            //catch (Exception)
-            //{
-            //
-            //    return Table;
-            //}
+            }
+            catch (Exception)
+            {
+
+                return Table;
+            }
 
         }
 

@@ -1,7 +1,7 @@
 ﻿
 namespace My_Project_PP04.Control
 {
-    partial class ProductListItems
+    partial class UserProductListItems
     {
         /// <summary> 
         /// Обязательная переменная конструктора.
@@ -29,7 +29,7 @@ namespace My_Project_PP04.Control
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductListItems));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserProductListItems));
             this.panelFill = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -114,11 +114,6 @@ namespace My_Project_PP04.Control
             // 
             this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.numericUpDown1.Location = new System.Drawing.Point(48, 322);
-            this.numericUpDown1.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(145, 34);
             this.numericUpDown1.TabIndex = 2;
@@ -163,12 +158,10 @@ namespace My_Project_PP04.Control
             this.pictureBoxImg.Name = "pictureBoxImg";
             this.pictureBoxImg.Size = new System.Drawing.Size(260, 260);
             this.pictureBoxImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxImg.TabIndex = 7;
+            this.pictureBoxImg.TabIndex = 8;
             this.pictureBoxImg.TabStop = false;
-            this.pictureBoxImg.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelFill_MouseDown);
-            this.pictureBoxImg.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelFill_MouseUp);
             // 
-            // ProductListItems
+            // UserProductListItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -178,7 +171,7 @@ namespace My_Project_PP04.Control
             this.Controls.Add(this.pictureBoxImg);
             this.Controls.Add(this.panelFill);
             this.DoubleBuffered = true;
-            this.Name = "ProductListItems";
+            this.Name = "UserProductListItems";
             this.Padding = new System.Windows.Forms.Padding(10);
             this.Size = new System.Drawing.Size(260, 420);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.UserControl1_Paint);
@@ -193,7 +186,6 @@ namespace My_Project_PP04.Control
         #endregion
 
         private System.Windows.Forms.Panel panelFill;
-        private System.Windows.Forms.PictureBox pictureBoxImg;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
@@ -201,5 +193,6 @@ namespace My_Project_PP04.Control
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.PictureBox pictureBoxImg;
     }
 }

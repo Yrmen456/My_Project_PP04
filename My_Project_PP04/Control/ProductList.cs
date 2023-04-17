@@ -1,5 +1,6 @@
 ﻿using LibraryDataBase;
 using My_Project_PP04.Data;
+using My_Project_PP04.Forms;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -23,8 +24,9 @@ namespace My_Project_PP04.Control
             Program.ThisMain.ProductList = this;
             Program.ThisMain.panelBtn.Controls.Add(Program.ThisMain.panelTopBtn.panel2);
             Program.ThisMain.panelTopBtn.button4.Click += buttonBack_Click;
+            Program.ThisMain.panelTopBtn.button3.Click += buttonBasket_Click;
             Program.ThisMain.panelTopBtn.panel2.Show();
-
+            Program.ThisMain.panelTopBtn.ShowPriceBasket(Program.ThisMain.panelTopBtn.button3,"Корзина");
 
         }
         private void buttonBack_Click(object sender, EventArgs e)
@@ -37,6 +39,22 @@ namespace My_Project_PP04.Control
             Program.ThisMain.panelControl.Controls.Add(CategoriesList);
             this.Dispose();
         }
+        public Basket Basket = new Basket();
+        private void buttonBasket_Click(object sender, EventArgs e)
+        {
+       
+            if (Program.Basket.IsDisposed)
+            {
+                Program.MyApplicationContext.Open(Basket);
+            }
+            else
+            {
+                Program.MyApplicationContext.Open(Basket);
+                Program.Basket.Focus();
+            }
+
+        }
+
         private void ProductList_Load(object sender, EventArgs e)
         {
             SQLProducts();

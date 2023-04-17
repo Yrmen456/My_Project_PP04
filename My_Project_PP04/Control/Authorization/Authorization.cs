@@ -47,7 +47,7 @@ namespace My_Project_PP04.Control.Authorization
             DataSet dataSet = new DataSet();
             await Task.Run(() => {
                 dataSet = SQL.Table($@"Select Users.ID, Users.Login, Users.Password, Users.Surname, Users.Name,
-                Users.Patronymic,Users.DataOfBirth, Users.Gender as 'GenderCode', Gender.Name as 'Gender', Users.Roll as 'Role' from Users 
+                Users.Patronymic,Users.DataOfBirth,Users.Phone, Users.Gender as 'GenderCode', Gender.Name as 'Gender', Users.Roll as 'Role' from Users 
                 Inner Join Gender Gender on Gender.Code = Users.Gender
                 Inner Join Role Role on Role.ID = Users.Roll
                 where Login = '{textBoxLogin.Text}' and Password = '{textBoxPassword.Text}';
@@ -74,7 +74,7 @@ namespace My_Project_PP04.Control.Authorization
             string json2 = JsonConvert.SerializeObject(dataSet, Formatting.Indented);
             user.UserAdres = JsonConvert.DeserializeObject<UserAddresses>(json2);
             Data.Data.User = user;
-            Program.MyApplicationContext.Open(new Mian());
+            Program.MyApplicationContext.Open(new Main());
             Program.AuthorizationAndRegistration.Close();
         }
     }

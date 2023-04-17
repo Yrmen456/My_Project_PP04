@@ -42,12 +42,78 @@ namespace My_Project_PP04.Data
     public class UserAdres
     {
         public int ID { get; set; }
+        public string Adress { get; set; }
         public int IDUser { get; set; }
-        public string Street { get; set; }
-        public string House { get; set; }
-        public string Room { get; set; }
-        public string Porth { get; set; }
-        public string Floor { get; set; }
+        public string _Street { get; set; }
+        public string _House { get; set; }
+        public string _Room { get; set; }
+        public string _Porth { get; set; }
+        public string _Floor { get; set; }
+        public string Street {
+            get => _Street;
+            set
+            {
+                if (value != _Street)
+                {
+                    _Street = value;
+                    FullAdress();
+                }
+            }
+        }
+        public string House
+        {
+            get => _House;
+            set
+            {
+                if (value != _House)
+                {
+                    _House = value;
+                    FullAdress();
+                }
+            }
+        }
+        public string Room
+        {
+            get => _Room;
+            set
+            {
+                if (value != _Room)
+                {
+                    _Room = value;
+                    FullAdress();
+                }
+            }
+        }
+        public string Porth
+        {
+            get => _Porth;
+            set
+            {
+                if (value != _Porth)
+                {
+                    _Porth = value;
+                    FullAdress();
+                }
+            }
+        }
+        public string Floor
+        {
+            get => _Floor;
+            set
+            {
+                if (value != _Floor)
+                {
+                    _Floor = value;
+                    FullAdress();
+                }
+            }
+        }
+
+
+        void FullAdress()
+        {
+            Adress = $"ул {Street} дом {House} кв.{Room} подезд:{Porth} этаж:{Floor}";
+        }
     }
 
     public class Genders
@@ -84,4 +150,21 @@ namespace My_Project_PP04.Data
         public int Price { get; set; }
         public int Category { get; set; }
     }
+
+    public class Baskets
+    {
+        public List<Bascet> Basket { get; set; }
+    }
+
+    public class Bascet : Product
+    {
+        public int BasketID { get; set; }
+        public int UserID { get; set; }
+        public int ProductID { get; set; }
+        public int Count { get; set; }
+
+       
+
+    }
+
 }

@@ -13,7 +13,8 @@ namespace My_Project_PP04
         /// Главная точка входа для приложения.
         /// </summary>
         public static EntryForm AuthorizationAndRegistration;
-        public static Mian ThisMain;
+        public static Main ThisMain;
+        public static Basket Basket;
         [STAThread]
         static void Main()
         {

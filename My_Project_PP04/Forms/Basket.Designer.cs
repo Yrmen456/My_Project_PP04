@@ -1,17 +1,17 @@
 ﻿
 namespace My_Project_PP04.Forms
 {
-    partial class Mian
+    partial class Basket
     {
         /// <summary>
-        /// Обязательная переменная конструктора.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Освободить все используемые ресурсы.
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -21,11 +21,11 @@ namespace My_Project_PP04.Forms
             base.Dispose(disposing);
         }
 
-        #region Код, автоматически созданный конструктором форм Windows
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// Требуемый метод для поддержки конструктора — не изменяйте 
-        /// содержимое этого метода с помощью редактора кода.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
@@ -39,17 +39,20 @@ namespace My_Project_PP04.Forms
             this.panelControl.Location = new System.Drawing.Point(0, 91);
             this.panelControl.Name = "panelControl";
             this.panelControl.Size = new System.Drawing.Size(1064, 458);
-            this.panelControl.TabIndex = 0;
+            this.panelControl.TabIndex = 8;
             // 
-            // Mian
+            // Basket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 549);
             this.Controls.Add(this.panelControl);
-            this.Name = "Mian";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
+            this.MinimumSize = new System.Drawing.Size(1082, 596);
+            this.Name = "Basket";
+            this.Text = "Basket";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Basket_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Basket_FormClosed);
+            this.Load += new System.EventHandler(this.Basket_Load);
             this.Controls.SetChildIndex(this.panelControl, 0);
             this.ResumeLayout(false);
 
@@ -60,4 +63,3 @@ namespace My_Project_PP04.Forms
         internal System.Windows.Forms.Panel panelControl;
     }
 }
-

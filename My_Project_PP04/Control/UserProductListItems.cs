@@ -13,15 +13,21 @@ using System.Windows.Forms;
 
 namespace My_Project_PP04.Control
 {
-    public partial class ProductListItems : UserControl
+    public partial class UserProductListItems : UserControl
     {
-        ProductList productList; 
-        Product product;
-        public ProductListItems(ProductList productList, Product product)
+        UserProductList productUserList;
+        Bascet product;
+        public UserProductListItems(UserProductList productUserList, Bascet product)
         {
             InitializeComponent();
             this.product = product;
-            this.productList = productList;
+            this.productUserList = productUserList;
+      
+            if (numericUpDown1.Maximum < product.Count)
+            {
+                numericUpDown1.Maximum = product.Count;
+            }
+            numericUpDown1.Value = product.Count;
             label1.Text = product.Name;
             label2.Text = product.Price + " руб.";
             ShowPhoto();
@@ -98,23 +104,25 @@ namespace My_Project_PP04.Control
         {
             List<SqlParameter> ListSqlParamete = new List<SqlParameter>()
             {
-                new SqlParameter{ParameterName = "@UserID", SqlDbType = SqlDbType.Int, Value= Data.Data.User.ID },
-                new SqlParameter{ParameterName = "@ProductID", SqlDbType = SqlDbType.Int, Value= product.ID  },
-                new SqlParameter{ParameterName = "@Quantity", SqlDbType = SqlDbType.Int, Value=  int.Parse(numericUpDown1.Value.ToString()) },
+                new SqlParameter{ParameterName = "@BasketID", SqlDbType = SqlDbType.Int, Value= product.BasketID },
+                new SqlParameter{ParameterName = "@Count", SqlDbType = SqlDbType.Int, Value= int.Parse(numericUpDown1.Value.ToString())  },
             };
      
-            bool result = SQL.Query("EXEC AddItemsBasket @UserID, @ProductID, @Quantity", ListSqlParamete);
+            bool result = SQL.Query("EXEC UpdateItemsBasket @BasketID, @Count ", ListSqlParamete);
 
             MessageBox.Show(
-                "Товар Добавлен",
+                "Кол-во  Изменино",
                 "Сообщение",
                 MessageBoxButtons.OK    ,
                 MessageBoxIcon.Information,
                 MessageBoxDefaultButton.Button1);
-            numericUpDown1.Value = numericUpDown1.Minimum;
+            if (numericUpDown1.Value == 0)
+            {
+                this.Dispose();
+            }
 
-            Program.ThisMain.ProductList.Basket.ShowProduct();
-            Program.ThisMain.panelTopBtn.ShowPriceBasket(Program.ThisMain.panelTopBtn.button3, "Корзина");
+           Program.ThisMain.panelTopBtn.ShowPriceBasket(Program.ThisMain.panelTopBtn.button3, "Корзина");
+           Program.Basket.panelTopBtn.ShowPriceBasket(Program.ThisMain.panelTopBtn.button5, "Оформить заказ");
         }
     }
 }

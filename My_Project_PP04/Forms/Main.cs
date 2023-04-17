@@ -12,12 +12,12 @@ using My_Project_PP04.Data;
 
 namespace My_Project_PP04.Forms
 {
-    public partial class Mian : PatternForm
+    public partial class Main : PatternForm
     {
         public PanelTopBtn panelTopBtn = new PanelTopBtn();
         public CategoriesList CategoriesList;
         public ProductList ProductList;
-        public Mian()
+        public Main()
         {
             InitializeComponent();
             
