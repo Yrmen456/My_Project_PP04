@@ -4,13 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClassLibraryDataBase
+namespace My_Project_PP04.Data
 {
-    public class Class1
+    public enum Role
     {
-        public static void Metod()
-        {
-
-        }
+        Admin = 1,
+        Client = 2,
     }
 }

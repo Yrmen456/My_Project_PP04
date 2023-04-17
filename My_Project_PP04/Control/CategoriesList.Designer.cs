@@ -1,7 +1,7 @@
 ﻿
 namespace My_Project_PP04.Control
 {
-    partial class ProductList
+    partial class CategoriesList
     {
         /// <summary> 
         /// Обязательная переменная конструктора.
@@ -44,17 +44,16 @@ namespace My_Project_PP04.Control
             this.flowLayoutPanelProductList.Location = new System.Drawing.Point(0, 6);
             this.flowLayoutPanelProductList.Name = "flowLayoutPanelProductList";
             this.flowLayoutPanelProductList.Size = new System.Drawing.Size(1064, 446);
-            this.flowLayoutPanelProductList.TabIndex = 6;
+            this.flowLayoutPanelProductList.TabIndex = 7;
             // 
-            // ProductList
+            // CategoriesList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.flowLayoutPanelProductList);
-            this.Name = "ProductList";
+            this.Name = "CategoriesList";
             this.Size = new System.Drawing.Size(1064, 458);
-            this.Load += new System.EventHandler(this.ProductList_Load);
+            this.Load += new System.EventHandler(this.CategoriesList_Load);
             this.ResumeLayout(false);
 
         }

@@ -57,7 +57,7 @@ namespace My_Project_PP04.Forms
 
         #endregion
 
-        private System.Windows.Forms.Panel panelControl;
+        internal System.Windows.Forms.Panel panelControl;
     }
 }
 

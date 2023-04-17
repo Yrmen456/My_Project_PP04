@@ -23,6 +23,7 @@ namespace My_Project_PP04.Forms
             pictureBoxLink1.BackColor = Color.FromArgb(0, Color.Black);
             pictureBoxLink2.BackColor = Color.FromArgb(0, Color.Black);
             pictureBoxLink3.BackColor = Color.FromArgb(0, Color.Black);
+            panelBtn.BackColor = Color.FromArgb(0, Color.Black);
         }
      
         private void panel1_Paint(object sender, PaintEventArgs e)

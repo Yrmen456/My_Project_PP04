@@ -54,11 +54,29 @@
     <Compile Include="Control\Authorization\Authorization.Designer.cs">
       <DependentUpon>Authorization.cs</DependentUpon>
     </Compile>
+    <Compile Include="Control\CategoriesList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CategoriesList.Designer.cs">
+      <DependentUpon>CategoriesList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\PanelTopBtn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\PanelTopBtn.Designer.cs">
+      <DependentUpon>PanelTopBtn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Control\ProductList.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Control\ProductList.Designer.cs">
       <DependentUpon>ProductList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CategoriesListItems.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CategoriesListItems.Designer.cs">
+      <DependentUpon>CategoriesListItems.cs</DependentUpon>
     </Compile>
     <Compile Include="Control\ProductListItems.cs">
       <SubType>UserControl</SubType>
@@ -105,8 +123,8 @@
     <Compile Include="Data\BtnPassword.cs.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Data\SQL.cs" />
     <Compile Include="Data\Data.cs" />
+    <Compile Include="Data\Enum.cs" />
     <Compile Include="Data\ValidateData.cs" />
     <Compile Include="Forms\EntryForm.cs">
       <SubType>Form</SubType>
@@ -131,8 +149,17 @@
     <EmbeddedResource Include="Control\Authorization\Authorization.resx">
       <DependentUpon>Authorization.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Control\CategoriesList.resx">
+      <DependentUpon>CategoriesList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\PanelTopBtn.resx">
+      <DependentUpon>PanelTopBtn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Control\ProductList.resx">
       <DependentUpon>ProductList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CategoriesListItems.resx">
+      <DependentUpon>CategoriesListItems.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Control\ProductListItems.resx">
       <DependentUpon>ProductListItems.cs</DependentUpon>
@@ -214,6 +241,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\background_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibraryDataBase\LibraryDataBase.csproj">
+      <Project>{0d788707-2ea5-413c-9733-d2846bf0541a}</Project>
+      <Name>LibraryDataBase</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackgroundLight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackgroundRed.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

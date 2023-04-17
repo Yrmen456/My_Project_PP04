@@ -32,16 +32,16 @@ namespace My_Project_PP04.Forms
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EntryForm));
             this.panelForm = new System.Windows.Forms.Panel();
             this.panelTopMenu = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.CrosBtn = new System.Windows.Forms.PictureBox();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panelControl = new System.Windows.Forms.Panel();
             this.panelForm.SuspendLayout();
             this.panelTopMenu.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CrosBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelForm
@@ -70,16 +70,6 @@ namespace My_Project_PP04.Forms
             this.panelTopMenu.TabIndex = 0;
             this.panelTopMenu.TabStop = true;
             this.panelTopMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTop_MouseDown);
-            // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = global::My_Project_PP04.Properties.Resources.background_0;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel1.Controls.Add(this.panelControl);
-            this.panel1.Location = new System.Drawing.Point(-129, 46);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(938, 563);
-            this.panel1.TabIndex = 2;
             // 
             // CrosBtn
             // 
@@ -115,6 +105,18 @@ namespace My_Project_PP04.Forms
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(249, 670);
             this.panel2.TabIndex = 3;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTop_MouseDown);
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::My_Project_PP04.Properties.Resources.background_0;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Controls.Add(this.panelControl);
+            this.panel1.Location = new System.Drawing.Point(-129, 46);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(938, 563);
+            this.panel1.TabIndex = 2;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTop_MouseDown);
             // 
             // panelControl
             // 
@@ -141,9 +143,9 @@ namespace My_Project_PP04.Forms
             this.Load += new System.EventHandler(this.AuthorizationAndRegistration_Load);
             this.panelForm.ResumeLayout(false);
             this.panelTopMenu.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CrosBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

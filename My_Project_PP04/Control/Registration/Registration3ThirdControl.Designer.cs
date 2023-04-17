@@ -29,11 +29,12 @@ namespace My_Project_PP04.Control.Registration
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.labelControlTitle = new System.Windows.Forms.Label();
             this.panelInfo = new System.Windows.Forms.Panel();
+            this.validateTexBoxPhoneNumber = new My_Project_PP04.Data.ValidateTexBox();
             this.dateTimePickerDateOfBirth = new System.Windows.Forms.DateTimePicker();
             this.panelGender = new System.Windows.Forms.Panel();
-            this.validateTexBoxPhoneNumber = new My_Project_PP04.Data.ValidateTexBox();
             this.labelPhoneNumber = new System.Windows.Forms.Label();
             this.buttonContinue = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
@@ -55,9 +56,9 @@ namespace My_Project_PP04.Control.Registration
             // 
             // panelInfo
             // 
+            this.panelInfo.Controls.Add(this.validateTexBoxPhoneNumber);
             this.panelInfo.Controls.Add(this.dateTimePickerDateOfBirth);
             this.panelInfo.Controls.Add(this.panelGender);
-            this.panelInfo.Controls.Add(this.validateTexBoxPhoneNumber);
             this.panelInfo.Controls.Add(this.labelPhoneNumber);
             this.panelInfo.Controls.Add(this.buttonContinue);
             this.panelInfo.Controls.Add(this.buttonBack);
@@ -68,6 +69,22 @@ namespace My_Project_PP04.Control.Registration
             this.panelInfo.Name = "panelInfo";
             this.panelInfo.Size = new System.Drawing.Size(420, 307);
             this.panelInfo.TabIndex = 21;
+            // 
+            // validateTexBoxPhoneNumber
+            // 
+            this.validateTexBoxPhoneNumber.ArrBuilt_In = new My_Project_PP04.Data.Built_In[] {
+        My_Project_PP04.Data.Built_In.Phone};
+            this.validateTexBoxPhoneNumber.ArrCustom = null;
+            this.validateTexBoxPhoneNumber.Control = this;
+            this.validateTexBoxPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
+            this.validateTexBoxPhoneNumber.Form = null;
+            this.validateTexBoxPhoneNumber.Location = new System.Drawing.Point(15, 37);
+            this.validateTexBoxPhoneNumber.Name = "validateTexBoxPhoneNumber";
+            this.validateTexBoxPhoneNumber.Object = null;
+            this.validateTexBoxPhoneNumber.Size = new System.Drawing.Size(342, 34);
+            this.validateTexBoxPhoneNumber.Spaces = My_Project_PP04.Data.ValidateTexBox.YesNo.None;
+            this.validateTexBoxPhoneNumber.TabIndex = 1113;
+            this.validateTexBoxPhoneNumber.Validate = My_Project_PP04.Data.TypeValidate.Built_In;
             // 
             // dateTimePickerDateOfBirth
             // 
@@ -87,18 +104,6 @@ namespace My_Project_PP04.Control.Registration
             this.panelGender.Name = "panelGender";
             this.panelGender.Size = new System.Drawing.Size(340, 66);
             this.panelGender.TabIndex = 17;
-            // 
-            // validateTexBoxPhoneNumber
-            // 
-            this.validateTexBoxPhoneNumber.ArrBuilt_In = new My_Project_PP04.Data.Built_In[0];
-            this.validateTexBoxPhoneNumber.ArrCustom = new My_Project_PP04.Data.ValidateTexBox.Custom[0];
-            this.validateTexBoxPhoneNumber.ErrorProvider = null;
-            this.validateTexBoxPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
-            this.validateTexBoxPhoneNumber.Location = new System.Drawing.Point(13, 36);
-            this.validateTexBoxPhoneNumber.Name = "validateTexBoxPhoneNumber";
-            this.validateTexBoxPhoneNumber.Size = new System.Drawing.Size(342, 34);
-            this.validateTexBoxPhoneNumber.TabIndex = 1;
-            this.validateTexBoxPhoneNumber.Validate = My_Project_PP04.Data.TypeValidate.None;
             // 
             // labelPhoneNumber
             // 
@@ -121,6 +126,7 @@ namespace My_Project_PP04.Control.Registration
             this.buttonContinue.TabIndex = 1112;
             this.buttonContinue.Text = "Продолжить";
             this.buttonContinue.UseVisualStyleBackColor = false;
+            this.buttonContinue.VisibleChanged += new System.EventHandler(this.buttonContinue_VisibleChanged);
             this.buttonContinue.Click += new System.EventHandler(this.buttonContinue_Click);
             // 
             // buttonBack
@@ -176,13 +182,13 @@ namespace My_Project_PP04.Control.Registration
 
         private System.Windows.Forms.Label labelControlTitle;
         private System.Windows.Forms.Panel panelInfo;
-        private Data.ValidateTexBox validateTexBoxPhoneNumber;
         private System.Windows.Forms.Label labelPhoneNumber;
         private System.Windows.Forms.Button buttonContinue;
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Label labelDateOfBirth;
         private System.Windows.Forms.Label labelGender;
-        private System.Windows.Forms.DateTimePicker dateTimePickerDateOfBirth;
         private System.Windows.Forms.Panel panelGender;
+        internal System.Windows.Forms.DateTimePicker dateTimePickerDateOfBirth;
+        internal Data.ValidateTexBox validateTexBoxPhoneNumber;
     }
 }

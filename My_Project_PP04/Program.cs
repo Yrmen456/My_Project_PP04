@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using My_Project_PP04.Forms;
-
+using LibraryDataBase;
 namespace My_Project_PP04
 {
     static class Program
@@ -13,9 +13,11 @@ namespace My_Project_PP04
         /// Главная точка входа для приложения.
         /// </summary>
         public static EntryForm AuthorizationAndRegistration;
+        public static Mian ThisMain;
         [STAThread]
         static void Main()
         {
+            SQL.Conect = @"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=My_Project_PP04;Integrated Security=True";
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             MyApplicationContext.Open(new EntryForm());

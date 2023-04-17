@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.33027.164
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My_Project_PP04", "My_Project_PP04\My_Project_PP04.csproj", "{571E8050-FDF7-47A3-ABA4-ABC4CD6E01FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryDataBase", "ClassLibraryDataBase\ClassLibraryDataBase.csproj", "{0D788707-2EA5-413C-9733-D2846BF0541A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryDataBase", "ClassLibraryDataBase\LibraryDataBase.csproj", "{0D788707-2EA5-413C-9733-D2846BF0541A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

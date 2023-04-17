@@ -33,20 +33,17 @@ namespace My_Project_PP04.Control.Registration
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registration1FirstControl));
             this.labelControlTitle = new System.Windows.Forms.Label();
             this.panelInfo = new System.Windows.Forms.Panel();
-            this.btnValidatePassword2 = new My_Project_PP04.Data.BtnValidatePassword();
             this.validateTexBoxPassword2 = new My_Project_PP04.Data.ValidateTexBox();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnValidatePassword1 = new My_Project_PP04.Data.BtnValidatePassword();
             this.validateTexBoxPassword1 = new My_Project_PP04.Data.ValidateTexBox();
             this.validateTexBoxLogin = new My_Project_PP04.Data.ValidateTexBox();
+            this.btnValidatePassword2 = new My_Project_PP04.Data.BtnValidatePassword();
+            this.btnValidatePassword1 = new My_Project_PP04.Data.BtnValidatePassword();
             this.labelLogin = new System.Windows.Forms.Label();
             this.buttonContinue = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
             this.labelPassword1 = new System.Windows.Forms.Label();
             this.labelPassword2 = new System.Windows.Forms.Label();
-            this.validateTexBox1 = new My_Project_PP04.Data.ValidateTexBox();
             this.panelInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControlTitle
@@ -63,11 +60,11 @@ namespace My_Project_PP04.Control.Registration
             // panelInfo
             // 
             this.panelInfo.BackColor = System.Drawing.Color.Transparent;
-            this.panelInfo.Controls.Add(this.btnValidatePassword2);
-            this.panelInfo.Controls.Add(this.btnValidatePassword1);
             this.panelInfo.Controls.Add(this.validateTexBoxPassword2);
             this.panelInfo.Controls.Add(this.validateTexBoxPassword1);
             this.panelInfo.Controls.Add(this.validateTexBoxLogin);
+            this.panelInfo.Controls.Add(this.btnValidatePassword2);
+            this.panelInfo.Controls.Add(this.btnValidatePassword1);
             this.panelInfo.Controls.Add(this.labelLogin);
             this.panelInfo.Controls.Add(this.buttonContinue);
             this.panelInfo.Controls.Add(this.buttonBack);
@@ -78,6 +75,57 @@ namespace My_Project_PP04.Control.Registration
             this.panelInfo.Name = "panelInfo";
             this.panelInfo.Size = new System.Drawing.Size(420, 272);
             this.panelInfo.TabIndex = 19;
+            this.panelInfo.VisibleChanged += new System.EventHandler(this.panelInfo_VisibleChanged);
+            // 
+            // validateTexBoxPassword2
+            // 
+            this.validateTexBoxPassword2.ArrBuilt_In = new My_Project_PP04.Data.Built_In[] {
+        My_Project_PP04.Data.Built_In.Password};
+            this.validateTexBoxPassword2.ArrCustom = null;
+            this.validateTexBoxPassword2.Control = this;
+            this.validateTexBoxPassword2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
+            this.validateTexBoxPassword2.Form = null;
+            this.validateTexBoxPassword2.Location = new System.Drawing.Point(15, 187);
+            this.validateTexBoxPassword2.Name = "validateTexBoxPassword2";
+            this.validateTexBoxPassword2.Object = null;
+            this.validateTexBoxPassword2.Size = new System.Drawing.Size(342, 34);
+            this.validateTexBoxPassword2.Spaces = My_Project_PP04.Data.ValidateTexBox.YesNo.None;
+            this.validateTexBoxPassword2.TabIndex = 19;
+            this.validateTexBoxPassword2.UseSystemPasswordChar = true;
+            this.validateTexBoxPassword2.Validate = My_Project_PP04.Data.TypeValidate.Built_In;
+            // 
+            // validateTexBoxPassword1
+            // 
+            this.validateTexBoxPassword1.ArrBuilt_In = new My_Project_PP04.Data.Built_In[] {
+        My_Project_PP04.Data.Built_In.Password};
+            this.validateTexBoxPassword1.ArrCustom = null;
+            this.validateTexBoxPassword1.Control = this;
+            this.validateTexBoxPassword1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
+            this.validateTexBoxPassword1.Form = null;
+            this.validateTexBoxPassword1.Location = new System.Drawing.Point(15, 111);
+            this.validateTexBoxPassword1.Name = "validateTexBoxPassword1";
+            this.validateTexBoxPassword1.Object = null;
+            this.validateTexBoxPassword1.Size = new System.Drawing.Size(342, 34);
+            this.validateTexBoxPassword1.Spaces = My_Project_PP04.Data.ValidateTexBox.YesNo.None;
+            this.validateTexBoxPassword1.TabIndex = 18;
+            this.validateTexBoxPassword1.UseSystemPasswordChar = true;
+            this.validateTexBoxPassword1.Validate = My_Project_PP04.Data.TypeValidate.Built_In;
+            // 
+            // validateTexBoxLogin
+            // 
+            this.validateTexBoxLogin.ArrBuilt_In = new My_Project_PP04.Data.Built_In[] {
+        My_Project_PP04.Data.Built_In.Email};
+            this.validateTexBoxLogin.ArrCustom = null;
+            this.validateTexBoxLogin.Control = this;
+            this.validateTexBoxLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
+            this.validateTexBoxLogin.Form = null;
+            this.validateTexBoxLogin.Location = new System.Drawing.Point(15, 37);
+            this.validateTexBoxLogin.Name = "validateTexBoxLogin";
+            this.validateTexBoxLogin.Object = null;
+            this.validateTexBoxLogin.Size = new System.Drawing.Size(342, 34);
+            this.validateTexBoxLogin.Spaces = My_Project_PP04.Data.ValidateTexBox.YesNo.None;
+            this.validateTexBoxLogin.TabIndex = 17;
+            this.validateTexBoxLogin.Validate = My_Project_PP04.Data.TypeValidate.Built_In;
             // 
             // btnValidatePassword2
             // 
@@ -89,25 +137,6 @@ namespace My_Project_PP04.Control.Registration
             this.btnValidatePassword2.TabIndex = 7;
             this.btnValidatePassword2.textBox = this.validateTexBoxPassword2;
             // 
-            // validateTexBoxPassword2
-            // 
-            this.validateTexBoxPassword2.ArrBuilt_In = new My_Project_PP04.Data.Built_In[] {
-        My_Project_PP04.Data.Built_In.Password};
-            this.validateTexBoxPassword2.ArrCustom = new My_Project_PP04.Data.ValidateTexBox.Custom[0];
-            this.validateTexBoxPassword2.ErrorProvider = this.errorProvider1;
-            this.validateTexBoxPassword2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
-            this.validateTexBoxPassword2.Location = new System.Drawing.Point(13, 187);
-            this.validateTexBoxPassword2.Name = "validateTexBoxPassword2";
-            this.validateTexBoxPassword2.Size = new System.Drawing.Size(342, 34);
-            this.validateTexBoxPassword2.TabIndex = 3;
-            this.validateTexBoxPassword2.UseSystemPasswordChar = true;
-            this.validateTexBoxPassword2.Validate = My_Project_PP04.Data.TypeValidate.Built_In;
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
-            this.errorProvider1.ContainerControl = this;
-            // 
             // btnValidatePassword1
             // 
             this.btnValidatePassword1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnValidatePassword1.BackgroundImage")));
@@ -117,33 +146,6 @@ namespace My_Project_PP04.Control.Registration
             this.btnValidatePassword1.Size = new System.Drawing.Size(40, 34);
             this.btnValidatePassword1.TabIndex = 7;
             this.btnValidatePassword1.textBox = this.validateTexBoxPassword1;
-            // 
-            // validateTexBoxPassword1
-            // 
-            this.validateTexBoxPassword1.ArrBuilt_In = new My_Project_PP04.Data.Built_In[] {
-        My_Project_PP04.Data.Built_In.Password};
-            this.validateTexBoxPassword1.ArrCustom = new My_Project_PP04.Data.ValidateTexBox.Custom[0];
-            this.validateTexBoxPassword1.ErrorProvider = this.errorProvider1;
-            this.validateTexBoxPassword1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
-            this.validateTexBoxPassword1.Location = new System.Drawing.Point(13, 111);
-            this.validateTexBoxPassword1.Name = "validateTexBoxPassword1";
-            this.validateTexBoxPassword1.Size = new System.Drawing.Size(342, 34);
-            this.validateTexBoxPassword1.TabIndex = 2;
-            this.validateTexBoxPassword1.UseSystemPasswordChar = true;
-            this.validateTexBoxPassword1.Validate = My_Project_PP04.Data.TypeValidate.Built_In;
-            // 
-            // validateTexBoxLogin
-            // 
-            this.validateTexBoxLogin.ArrBuilt_In = new My_Project_PP04.Data.Built_In[] {
-        My_Project_PP04.Data.Built_In.Email};
-            this.validateTexBoxLogin.ArrCustom = new My_Project_PP04.Data.ValidateTexBox.Custom[0];
-            this.validateTexBoxLogin.ErrorProvider = this.errorProvider1;
-            this.validateTexBoxLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
-            this.validateTexBoxLogin.Location = new System.Drawing.Point(13, 36);
-            this.validateTexBoxLogin.Name = "validateTexBoxLogin";
-            this.validateTexBoxLogin.Size = new System.Drawing.Size(342, 34);
-            this.validateTexBoxLogin.TabIndex = 1;
-            this.validateTexBoxLogin.Validate = My_Project_PP04.Data.TypeValidate.Built_In;
             // 
             // labelLogin
             // 
@@ -201,34 +203,20 @@ namespace My_Project_PP04.Control.Registration
             this.labelPassword2.TabIndex = 12;
             this.labelPassword2.Text = "Повторите Пароль:";
             // 
-            // validateTexBox1
-            // 
-            this.validateTexBox1.ArrBuilt_In = new My_Project_PP04.Data.Built_In[] {
-        My_Project_PP04.Data.Built_In.Email};
-            this.validateTexBox1.ArrCustom = null;
-            this.validateTexBox1.ErrorProvider = this.errorProvider1;
-            this.validateTexBox1.Location = new System.Drawing.Point(44, 43);
-            this.validateTexBox1.Name = "validateTexBox1";
-            this.validateTexBox1.Size = new System.Drawing.Size(329, 22);
-            this.validateTexBox1.TabIndex = 20;
-            this.validateTexBox1.Validate = My_Project_PP04.Data.TypeValidate.Built_In;
-            // 
             // Registration1FirstControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.validateTexBox1);
             this.Controls.Add(this.labelControlTitle);
             this.Controls.Add(this.panelInfo);
             this.DoubleBuffered = true;
             this.Name = "Registration1FirstControl";
             this.Size = new System.Drawing.Size(420, 390);
+            this.Load += new System.EventHandler(this.Registration1FirstControl_Load);
             this.panelInfo.ResumeLayout(false);
             this.panelInfo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -241,12 +229,10 @@ namespace My_Project_PP04.Control.Registration
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Label labelPassword1;
         private System.Windows.Forms.Label labelPassword2;
-        private Data.ValidateTexBox validateTexBoxLogin;
-        private Data.ValidateTexBox validateTexBoxPassword2;
-        private Data.ValidateTexBox validateTexBoxPassword1;
         private Data.BtnValidatePassword btnValidatePassword2;
         private Data.BtnValidatePassword btnValidatePassword1;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
-        private Data.ValidateTexBox validateTexBox1;
+        internal Data.ValidateTexBox validateTexBoxPassword2;
+        internal Data.ValidateTexBox validateTexBoxPassword1;
+        internal Data.ValidateTexBox validateTexBoxLogin;
     }
 }

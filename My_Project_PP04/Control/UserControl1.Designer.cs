@@ -88,8 +88,8 @@ namespace My_Project_PP04.Control
             // validateTexBox2
             // 
             this.validateTexBox2.ArrBuilt_In = new My_Project_PP04.Data.Built_In[0];
-            this.validateTexBox2.ArrCustom = new My_Project_PP04.Data.ValidateTexBox.Custom[0];
-            this.validateTexBox2.ErrorProvider = null;
+    
+
             this.validateTexBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
             this.validateTexBox2.Location = new System.Drawing.Point(28, 59);
             this.validateTexBox2.Name = "validateTexBox2";

@@ -27,6 +27,21 @@ namespace My_Project_PP04.Control.Registration
             Program.AuthorizationAndRegistration.Registration.radioButtonControl3.Checked = true;
         }
 
-       
+        private void Registration2SecondControl_Load(object sender, EventArgs e)
+        {
+            Program.AuthorizationAndRegistration.Registration.validateTexBoxCheckasd.Add(validateTexBox1);
+            Program.AuthorizationAndRegistration.Registration.validateTexBoxCheckasd.Add(validateTexBox2);
+            Program.AuthorizationAndRegistration.Registration.validateTexBoxCheckasd.Add(validateTexBox3);
+
+        }
+
+        private void Registration2SecondControl_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible == true)
+            {
+                Program.AuthorizationAndRegistration.Registration.radioButtonControl2.Checked = true;
+            }
+            
+        }
     }
 }

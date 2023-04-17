@@ -56,7 +56,7 @@ namespace My_Project_PP04.Control.Authorization
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(340, 34);
             this.textBoxPassword.TabIndex = 1;
-            this.textBoxPassword.Text = "qwerty";
+            this.textBoxPassword.Text = "Yrmen45";
             this.textBoxPassword.UseSystemPasswordChar = true;
             // 
             // labelControlTitle
@@ -91,22 +91,26 @@ namespace My_Project_PP04.Control.Authorization
             // 
             // buttonLogIn
             // 
+            this.buttonLogIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(222)))), ((int)(((byte)(50)))));
+            this.buttonLogIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLogIn.Location = new System.Drawing.Point(31, 324);
             this.buttonLogIn.Name = "buttonLogIn";
             this.buttonLogIn.Size = new System.Drawing.Size(121, 38);
             this.buttonLogIn.TabIndex = 5;
             this.buttonLogIn.Text = "Вход";
-            this.buttonLogIn.UseVisualStyleBackColor = true;
+            this.buttonLogIn.UseVisualStyleBackColor = false;
             this.buttonLogIn.Click += new System.EventHandler(this.buttonLogIn_Click);
             // 
             // buttonRegistration
             // 
+            this.buttonRegistration.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(222)))), ((int)(((byte)(50)))));
+            this.buttonRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRegistration.Location = new System.Drawing.Point(163, 324);
             this.buttonRegistration.Name = "buttonRegistration";
             this.buttonRegistration.Size = new System.Drawing.Size(206, 38);
             this.buttonRegistration.TabIndex = 6;
             this.buttonRegistration.Text = "Регистрация";
-            this.buttonRegistration.UseVisualStyleBackColor = true;
+            this.buttonRegistration.UseVisualStyleBackColor = false;
             this.buttonRegistration.Click += new System.EventHandler(this.buttonRegistration_Click);
             // 
             // btnPassword1

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using My_Project_PP04.Control;
 using My_Project_PP04.Control.Authorization;
 using My_Project_PP04.Control.Registration;
 namespace My_Project_PP04.Forms
@@ -30,7 +31,8 @@ namespace My_Project_PP04.Forms
             await Task.Delay(500);
             panelControl.Controls.Add(Authorization);
 
-     
+
+
         }
 
         //panelTop
@@ -39,6 +41,8 @@ namespace My_Project_PP04.Forms
             panelTopMenu.Capture = false;
             pictureBoxLogo.Capture = false;
             panelForm.Capture = false;
+            panel1.Capture = false;
+            panel2.Capture = false;
             Message m = Message.Create(Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
             WndProc(ref m);
         }
