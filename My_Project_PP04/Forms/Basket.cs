@@ -40,9 +40,9 @@ namespace My_Project_PP04.Forms
             UserProductList.Name = "UserProductList";
             panelControl.Controls.Add(UserProductList);
         }
+        public UserDate userDate = new UserDate();
         private void buttonBasket_Click(object sender, EventArgs e)
         {
-            UserDate userDate = new UserDate();
             userDate.ShowDialog();
         }
         private void buttonBack_Click(object sender, EventArgs e)
@@ -72,18 +72,19 @@ namespace My_Project_PP04.Forms
                 
             }
             Program.MyApplicationContext.Open(new Main());
+            Program.ThisMain.ProductList.Basket = new Basket();
             this.Close();
         
         }
 
         private void Basket_FormClosed(object sender, FormClosedEventArgs e)
         {
-
+            Program.ThisMain.ProductList.Basket = new Basket();
         }
 
         private void Basket_FormClosing(object sender, FormClosingEventArgs e)
         {
-            
+            Program.ThisMain.ProductList.Basket = new Basket();
         }
     }
 }

@@ -53,8 +53,7 @@ namespace My_Project_PP04.Control
             }
             if (dataSet.Tables[0].Rows.Count <= 0)
             {
-                MessageBox.Show("F2");
-                return;
+                
             }
 
             dataSet.Tables[0].TableName = "Basket";

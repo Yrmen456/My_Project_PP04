@@ -50,7 +50,7 @@ namespace My_Project_PP04.Control
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Transparent;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.flowLayoutPanelProductList);
             this.Name = "UserProductList";
             this.Size = new System.Drawing.Size(1064, 458);

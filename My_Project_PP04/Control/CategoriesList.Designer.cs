@@ -39,7 +39,7 @@ namespace My_Project_PP04.Control
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanelProductList.AutoScroll = true;
-            this.flowLayoutPanelProductList.BackColor = System.Drawing.Color.Transparent;
+            this.flowLayoutPanelProductList.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanelProductList.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanelProductList.Location = new System.Drawing.Point(0, 6);
             this.flowLayoutPanelProductList.Name = "flowLayoutPanelProductList";

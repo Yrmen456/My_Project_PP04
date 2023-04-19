@@ -28,7 +28,7 @@ namespace My_Project_PP04.Forms
      
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            panelBtn.Width = (this.Width / 100) * 40;
+            //panelBtn.Width = (this.Width / 100) * 40;
         }
 
         private void pictureBoxLink_Click(object sender, EventArgs e)
